@@ -1,0 +1,44 @@
+{
+	"name": "🏖️ .NET Development Environment",
+
+	"dockerComposeFile": "compose.yml",
+	"service": "dot-net-workspace",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+	"features": {
+		"git": "latest"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.csharp",
+				"ms-azuretools.vscode-docker",
+				"GitHub.copilot",
+				"esbenp.prettier-vscode",
+				"ms-vscode.vscode-node-azure-pack",
+				"ms-dotnettools.csdevkit",
+				"vallyscode.crayons"
+			]
+		}
+	},
+    "remoteEnv": {
+    },
+	"forwardPorts": [],
+   	//"mounts": [
+    //    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    //],
+	"mounts": [
+		//"source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
+		"source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/${localEnv:USER}/.ssh,type=bind,consistency=cached"
+	],
+	/*
+		postCreateCommand configures Git to recognize the container workspace folder as a safe directory. 
+	*/
+	"postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+	/*
+		remoteUser configures the container to run as the non-root user created in the Dockerfile. 
+	*/
+	"remoteUser": "${localEnv:USER}"
+	//"postCreateCommand": "dotnet --info"
+
+}

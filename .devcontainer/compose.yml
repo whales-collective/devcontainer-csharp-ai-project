@@ -1,0 +1,30 @@
+services:
+
+  dot-net-workspace:
+    build:
+      context: .
+      platforms:
+        #- "linux/amd64"
+        - "linux/arm64"
+      dockerfile: Dockerfile
+      args:
+        - USER_NAME=${USER}
+        - DOT_NET_VERSION=8.0
+    volumes:
+      - ../..:/workspaces:cached      
+    command: sleep infinity
+
+    models:
+      chat-agent:
+        endpoint_var: MODEL_RUNNER_BASE_URL
+        model_var: MODEL_RUNNER_CHAT_MODEL
+
+
+
+models:
+  chat-agent:
+    model: hf.co/menlo/jan-nano-gguf:q4_k_m
+
+
+
+
