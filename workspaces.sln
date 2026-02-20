@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello-openai", "hello-openai\hello-openai.csproj", "{028646DD-7840-8F17-65B1-B3A2C151A851}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hello-openai-streaming", "hello-openai-streaming\hello-openai-streaming.csproj", "{65AAA7A2-850E-9878-BD64-6F899B19EE47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{028646DD-7840-8F17-65B1-B3A2C151A851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028646DD-7840-8F17-65B1-B3A2C151A851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028646DD-7840-8F17-65B1-B3A2C151A851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028646DD-7840-8F17-65B1-B3A2C151A851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65AAA7A2-850E-9878-BD64-6F899B19EE47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65AAA7A2-850E-9878-BD64-6F899B19EE47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65AAA7A2-850E-9878-BD64-6F899B19EE47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65AAA7A2-850E-9878-BD64-6F899B19EE47}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5ABF0737-5FBE-4EC2-8D11-05EB5E654910}
+	EndGlobalSection
+EndGlobal

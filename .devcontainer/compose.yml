@@ -11,7 +11,7 @@ services:
         - USER_NAME=${USER}
         - DOT_NET_VERSION=8.0
     volumes:
-      - ../..:/workspaces:cached      
+      - ..:/workspaces:cached      
     command: sleep infinity
 
     models:

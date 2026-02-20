@@ -3,7 +3,7 @@
 
 	"dockerComposeFile": "compose.yml",
 	"service": "dot-net-workspace",
-    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "workspaceFolder": "/workspaces",
 	"features": {
 		"git": "latest"
 	},
